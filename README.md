@@ -1,7 +1,7 @@
 # Portfolio
-Build based project by Oscar Hernandez
+Based a project by Oscar Hernandez
 ---
-Oscar Hernandez's work is also featured here if you are interested:
+Oscar Hernandez's work is featured here if you are interested:
 
 [Astro Themes](https://astro.build/themes/details/dark-minimal/)
 
