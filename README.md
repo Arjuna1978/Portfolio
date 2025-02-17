@@ -1,5 +1,5 @@
 # Portfolio
-Based a project by Oscar Hernandez
+On top of a project by Oscar Hernandez
 ---
 Oscar Hernandez's work is featured here if you are interested:
 
