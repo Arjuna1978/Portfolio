@@ -26,7 +26,7 @@ This component is powered by FormSpree https://formspree.io/. Create your free a
 ## **Local configuration** 
 1. Clone the repo:  
 ```
-git clone https://github.com/gothsec/portfolio
+git clone https://github.com/arjuna1978/portfolio
 ```
 2. Install dependencies:
 ```  
