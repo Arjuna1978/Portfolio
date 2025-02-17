@@ -24,7 +24,7 @@ const SkillsList = () => {
     'Machinery of delivery': [
       'Defining management frameworks',
       'Defining roles and responsibilities',
-      'Delivering the change',
+      'Delivering the organisational change',
     ],
     'Delivery': [
       'Maintaining the roadmap',
