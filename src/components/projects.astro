@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import svgl from "../../public/svgl.png";
-import stockin from "../../public/stockin.png";
+import DCS from "../../public/projects/DCS.png";
+import SquareBear from "../../public/projects/SquareBear.png";
+import Apkudo from "../../public/projects/Apkudo.png";
+import SKFL from "../../public/projects/SKFL.png";
 
 interface Project {
   title: string;
@@ -13,25 +15,37 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Government Licencing",
-    image: stockin as ImageMetadata,
+    image: DCS as ImageMetadata,
     link: "https://www.service.nsw.gov.au/guide/check-a-business-or-trade-licence",
-    status: "In Production",
+    status: "$2.7 mil project ",
   },
   {
-    title: "Svgl.app",
-    image: svgl as ImageMetadata,
-    link: "https://github.com/pheralb/svgl",
-    status: "Contributor",
+    title: "SquareBear",
+    image: SquareBear as ImageMetadata,
+    link: "https://app.squarebear.com.au/",
+    status: "My 1st startup, good customer base",
+  },
+  {
+    title: "Apkudo",
+    image: Apkudo as ImageMetadata,
+    link: "https://www.apkudo.com/platform-overview",
+    status: "Successful robotics platform",
+  },
+  {
+    title: "SKFL",
+    image: SKFL as ImageMetadata,
+    link: "https://skfl.tech/",
+    status: "My 2nd startup, in BETA, first customers engaged",
   },
 ];
 ---
 
 <section id="projects" class="py-12 border-t border-[#ffffff10] text-[var(--white)]">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My work</h2>
-    <h3 class="text-4xl md:text-5xl font-medium mb-8">Projects</h3>
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Experience</h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Snapshot</h3>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       {
         projects.map((project) => (
           <div class="group">
@@ -79,7 +93,7 @@ const projects: Project[] = [
       aria-label="GitHub"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
     >
-      <span class="md:text-lg text-md">More projects on</span>
+      <span class="md:text-lg text-md">More experience details on</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
