@@ -1,6 +1,5 @@
 # Portfolio
 Build based project by Oscar Hernandez
-![OscarHernandez-portfolio](https://github.com/user-attachments/assets/e284a42b-15c5-495c-99c7-ad5c1eb3bbe7)
 ---
 Oscar Hernandez's work is also featured here if you are interested:
 
