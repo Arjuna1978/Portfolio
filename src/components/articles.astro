@@ -1,9 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import DCS from "../../public/projects/DCS.png";
-import SquareBear from "../../public/projects/SquareBear.png";
-import Apkudo from "../../public/projects/Apkudo.png";
-import SKFL from "../../public/projects/SKFL.png";
+import Fail from "../../public/articles/Fail.png";
+import Mind from "../../public/articles/Mind.png";
+import Go from "../../public/articles/Go.png";
 
 interface Articles {
   title: string;
@@ -15,27 +14,21 @@ interface Articles {
 const articles: Articles[] = [
   {
     title: "Why do products fail?",
-    image: DCS as ImageMetadata,
+    image: Fail as ImageMetadata,
     link: "https://www.leadingtheproduct.com/blog/why-do-products-fail/",
-    status: "Only 14% of software projects are successful. For a $ 5t industry this is very wasteful. Why does this happen? ",
+    status: "Year: 2023, Software products fail more often than not. Why does this happen? ",
   },
   {
-    title: "SquareBear",
-    image: SquareBear as ImageMetadata,
-    link: "https://app.squarebear.com.au/",
-    status: "My 1st startup, good customer base",
+    title: "Changing mind",
+    image: Mind as ImageMetadata,
+    link: "https://www.linkedin.com/pulse/7-approaches-can-help-you-change-someones-mind-arjuna-vijayanayagam/",
+    status: "Year: 2017, How to help people see what that you see it. ",
   },
   {
-    title: "Apkudo",
-    image: Apkudo as ImageMetadata,
-    link: "https://www.apkudo.com/platform-overview",
-    status: "Successful robotics platform",
-  },
-  {
-    title: "SKFL",
-    image: SKFL as ImageMetadata,
-    link: "https://skfl.tech/",
-    status: "SKFL in BETA, first customers engaged",
+    title: "Alpha GO",
+    image: Go as ImageMetadata,
+    link: "https://www.linkedin.com/pulse/google-ai-wins-go-you-just-lost-your-job-arjuna-vijayanayagam/",
+    status: "Year: 2017, Why is Apha Go such a big deal?",
   },
 ];
 ---
@@ -48,7 +41,7 @@ const articles: Articles[] = [
     <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Thought leadership</h2>
     <h3 class="text-4xl md:text-5xl font-medium mb-8">Articles</h3>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {
         articles.map((articles) => (
           <div class="group">
