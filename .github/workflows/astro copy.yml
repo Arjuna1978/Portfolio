@@ -77,7 +77,6 @@ jobs:
         with:
           path: ${{ env.BUILD_PATH }}/dist
 
-  # Add this new job to deploy the artifact to GitHub Pages
   deploy:
     environment:
       name: github-pages
