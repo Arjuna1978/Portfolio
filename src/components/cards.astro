@@ -1,0 +1,63 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  imagePath: string;
+  altText: string;
+  title: string;
+  description: string;
+  link: string;
+  age: number;
+}
+
+const { imagePath, altText, title, link, description } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif}"
+);
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+  );
+---
+
+<div class="card">
+  <a href={link} target="_blank" rel="noopener noreferrer" class="block">
+    <div
+      class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4"
+    >
+      <Image
+        src={images[imagePath]()}
+        alt={altText}
+        class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+    <div class="flex items-center px-3">
+      <div class="flex-grow">
+        <h4 class="text-2xl font-semibold">{title}</h4>
+        <span class="py-1 text-sm text-[var(--white-icon)]">
+          {description}
+        </span>
+      </div>
+      <div class="flex gap-2 ml-auto">
+        <a
+          target="_blank"
+          href={link}
+          aria-label="GitHub"
+          class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-7"
+          >
+            <path
+              d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </a>
+</div>
