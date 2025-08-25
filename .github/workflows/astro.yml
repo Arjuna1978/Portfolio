@@ -70,13 +70,15 @@ jobs:
         run: |
           # Use your astro.config.mjs file to define the site and base paths.
           ${{ steps.detect-package-manager.outputs.runner }} astro build
+          ${{ steps.detect-package-manager.outputs.runner }} astro build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.BUILD_PATH }}/dist
 
-  # Add this new job to deploy the artifact to GitHub Pages
   deploy:
     environment:
       name: github-pages
