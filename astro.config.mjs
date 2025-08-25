@@ -15,7 +15,7 @@ export default defineConfig({
   
   // The base path of your site on GitHub Pages.
   // This must match your repository name and is used as the prefix for all internal links.
-  base: PUBLIC_BASE_URL,
+  base: '/Portfolio',
 
   // This is the key change. We tell Astro to handle trailing slashes
   // to ensure consistent routing between local and deployed environments.
