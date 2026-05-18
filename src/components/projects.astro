@@ -4,6 +4,8 @@ import DCS from "../../public/projects/DCS.png";
 import SquareBear from "../../public/projects/SquareBear.png";
 import Apkudo from "../../public/projects/Apkudo.png";
 import SKFL from "../../public/projects/SKFL.png";
+import ForceViz from "../../public/projects/ForceViz.png"
+import VizFlo from "../../public/projects/vizflow.png"
 
 interface Project {
   title: string;
@@ -13,29 +15,17 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    title: "Government Licencing",
-    image: DCS as ImageMetadata,
-    link: "https://www.service.nsw.gov.au/guide/check-a-business-or-trade-licence",
-    status: "$2.7 mil project ",
+    {
+    title: "ForceViz",
+    image: ForceViz as ImageMetadata,
+    link: "https://arjuna1978.github.io/forceViz/",
+    status: "Personal Project: Data Visualiser ",
   },
-  {
-    title: "SquareBear",
-    image: SquareBear as ImageMetadata,
-    link: "https://app.squarebear.com.au/",
-    status: "My 1st startup, good customer base",
-  },
-  {
-    title: "Apkudo",
-    image: Apkudo as ImageMetadata,
-    link: "https://www.apkudo.com/platform-overview",
-    status: "Successful robotics platform",
-  },
-  {
-    title: "SKFL",
-    image: SKFL as ImageMetadata,
-    link: "https://skfl.tech/",
-    status: "SKFL in BETA, first customers engaged",
+      {
+    title: "VizFlo",
+    image: VizFlo as ImageMetadata,
+    link: "https://arjuna1978.github.io/my-bpmn-editor/",
+    status: "Personal Project: Business process modeling tool",
   },
 ];
 ---
@@ -45,8 +35,8 @@ const projects: Project[] = [
   class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
 >
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Experience</h2>
-    <h3 class="text-4xl md:text-5xl font-medium mb-8">Snapshot</h3>
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">I continue to build digital products in my spare time, keeping tech my skills sharp and maintaining authenicity</h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Featured</h3>
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       {
@@ -98,7 +88,7 @@ const projects: Project[] = [
     <a
       target="_blank"
       href="https://www.linkedin.com/in/arjunavijayanayagam/"
-      aria-label="GitHub"
+      aria-label="linkedin"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
     >
       <span class="md:text-lg text-md">More experience details on</span>
