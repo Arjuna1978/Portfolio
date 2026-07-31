@@ -6,6 +6,7 @@ import Apkudo from "../../public/projects/Apkudo.png";
 import SKFL from "../../public/projects/SKFL.png";
 import ForceViz from "../../public/projects/ForceViz.png";
 import VizFlo from "../../public/projects/vizflow.png";
+import VizFish from "../../public/projects/VizFish.png"
 
 interface Project {
   title: string;
@@ -19,13 +20,19 @@ const projects: Project[] = [
     title: "ForceViz",
     image: ForceViz as ImageMetadata,
     link: "https://arjuna1978.github.io/forceViz/",
-    status: "Personal Project: Data Visualiser ",
+    status: "Visualising complex, relational data models can be difficult. I created Force Viz to hel me visulaise TTL files for a data project I was working on.",
   },
   {
     title: "VizFlo",
     image: VizFlo as ImageMetadata,
     link: "https://arjuna1978.github.io/my-bpmn-editor/",
-    status: "Personal Project: Business process modeling tool",
+    status: "Imolementing BPMN.io, this tool features a text area input. Directly drop text from your LLM output and visualise your BPMN ",
+  },
+  {
+    title: "VizFish",
+    image: VizFish as ImageMetadata,
+    link: "https://arjuna1978.github.io/VizFish/",
+    status: "Based on Mermaid.js this tool features the ability to save .mmd files for later and a text box to paste LLM output",
   },
 ];
 ---
@@ -36,11 +43,9 @@ const projects: Project[] = [
 >
   <div class="max-w-5xl mx-auto">
     <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">
-      I continue to build digital products in my spare time, keeping my
-      skills sharp and maintaining authenicity
+      I continue to build digital products in my spare time, keeping my skills sharp and maintaining authenticity. The UI/UX designs for my apps are influenced by Dieter Rams's design language. While I recognise that my tools are not comparable to his excellent work, I am inspired to follow the "Weniger aber Besser" motif. 
     </h2>
-    <h3 class="text-4xl md:text-5xl font-medium mb-8">Featured</h3>
-
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Personal Projects</h3>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       {
         projects.map((project) => (
